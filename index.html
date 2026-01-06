@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audwin's 2nd Birthday Party</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #fff9e6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background: linear-gradient(to right, #ff7eb3, #ff758c, #ff7eb3);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            font-family: 'Comic Neue', cursive;
+            font-size: 3rem;
+            color: white;
+            text-shadow: 3px 3px 0 #ff4d8d;
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            font-family: 'Comic Neue', cursive;
+            font-size: 2.2rem;
+            color: white;
+            margin: 10px 0;
+            text-shadow: 2px 2px 0 #ff4d8d;
+        }
+        
+        h3 {
+            font-family: 'Comic Neue', cursive;
+            color: #5a9bff;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .age-badge {
+            background-color: #ffde59;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 1.8rem;
+            margin: 10px 0;
+            box-shadow: 0 4px 0 #ffb347;
+        }
+        
+        .date-badge {
+            background-color: #5a9bff;
+            color: white;
+            font-weight: bold;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 1.8rem;
+            margin: 10px 0;
+            box-shadow: 0 4px 0 #3a7bdf;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .party-details {
+            background-color: #f0f8ff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .detail-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            min-width: 60px;
+            text-align: center;
+        }
+        
+        .trampoline-event {
+            background-color: #fff0f7;
+            border: 4px dashed #ff7eb3;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .sock-note {
+            background-color: #e8f5e9;
+            border: 3px solid #4caf50;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .sock-note h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+        
+        .sock-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .trampoline-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .map-link {
+            display: inline-block;
+            background-color: #5a9bff;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .map-link:hover {
+            background-color: #3a7bdf;
+            transform: translateY(-3px);
+        }
+        
+        .footer {
+            background-color: #f9f9f9;
+            padding: 25px;
+            text-align: center;
+            border-top: 3px solid #ffde59;
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
+        .balloon {
+            position: absolute;
+            width: 60px;
+            height: 70px;
+            background-color: #ff7eb3;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .balloon:before {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 25px;
+            background-color: #ff7eb3;
+        }
+        
+        .balloon:nth-child(2) {
+            top: 40px;
+            left: 10%;
+            background-color: #5a9bff;
+            animation-delay: 0.5s;
+        }
+        
+        .balloon:nth-child(3) {
+            top: 60px;
+            right: 15%;
+            background-color: #ffde59;
+            animation-delay: 1s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+        
+        .cake {
+            font-size: 3rem;
+            margin: 15px 0;
+        }
+        
+        .party-info {
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+        
+        .time-display {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #0066cc;
+            margin: 5px 0;
+        }
+        
+        .sock-info {
+            font-size: 1.2rem;
+            color: #2e7d32;
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            
+            <h1>You're Invited!</h1>
+            <div class="age-badge">Audwin is Turning 2!</div>
+            <div class="date-badge">Saturday, January 17, 2026</div>
+            <h2>Birthday Party Celebration</h2>
+            
+            <div class="cake">🎂 🎈 🎉</div>
+        </div>
+        
+        <div class="content">
+            <div class="party-details">
+                <div class="detail-item">
+                    <div class="icon">📍</div>
+                    <div>
+                        <h3>Location</h3>
+                        <p class="party-info">56 Robideau Place, Whitby</p>
+                        <a href="https://maps.google.com/?q=56+Robideau+Place+Whitby" target="_blank" class="map-link">View on Google Maps</a>
+                    </div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="icon">⏰</div>
+                    <div>
+                        <h3>Time</h3>
+                        <p class="party-info">Starting at</p>
+                        <p class="time-display">12:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="trampoline-event">
+                <div class="trampoline-icon">🤸‍♂️ 🏃‍♂️ 🤸‍♀️</div>
+                <h2>Evening Trampoline Fun!</h2>
+                <h3>Sky Zone Trampoline Park - Whitby</h3>
+                <p class="party-info">For all the kids!</p>
+                <p class="time-display">6:15 PM - 8:15 PM</p>
+            </div>
+            
+            <div class="sock-note">
+                <div class="sock-icon">🧦 🧦 🧦</div>
+                <h3>Important Note</h3>
+                <p class="party-info">Please bring Sky Zone or Flying Squirrel socks for the kids!</p>
+                <p class="party-info">(Required for trampoline park access)</p>
+                <p class="sock-info">If you don't have trampoline socks, don't worry - you can purchase them at the park!</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>We can't wait to celebrate Audwin's 2nd birthday with you!</p>
+            <p>🎈 Let's make this a bouncy, fun-filled day! 🎈</p>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive balloons
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header');
+            
+            // Create more balloons
+            for (let i = 0; i < 7; i++) {
+                const balloon = document.createElement('div');
+                balloon.classList.add('balloon');
+                
+                // Random position
+                const leftPos = Math.random() * 90 + 5;
+                const topPos = Math.random() * 80 + 10;
+                const size = Math.random() * 25 + 45;
+                const color = getRandomColor();
+                const delay = Math.random() * 5;
+                
+                balloon.style.left = `${leftPos}%`;
+                balloon.style.top = `${topPos}%`;
+                balloon.style.width = `${size}px`;
+                balloon.style.height = `${size * 1.2}px`;
+                balloon.style.backgroundColor = color;
+                balloon.style.animationDelay = `${delay}s`;
+                
+                // Add string
+                balloon.innerHTML = '<div class="balloon-string"></div>';
+                
+                header.appendChild(balloon);
+            }
+            
+            function getRandomColor() {
+                const colors = ['#ff7eb3', '#5a9bff', '#ffde59', '#7affb3', '#ff9e5e', '#d9b3ff', '#ffcccb'];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+            
+            // Add click effect to balloons
+            document.querySelectorAll('.balloon').forEach(balloon => {
+                balloon.addEventListener('click', function() {
+                    this.style.transform = 'translateY(-100vh)';
+                    this.style.opacity = '0';
+                    this.style.transition = 'all 1.5s ease-out';
+                    
+                    // Remove after animation
+                    setTimeout(() => {
+                        this.remove();
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
